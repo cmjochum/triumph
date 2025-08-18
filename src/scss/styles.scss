@@ -1,0 +1,16 @@
+// Import all of Bootstrap’s CSS
+@import "bootstrap/scss/bootstrap";
+
+@mixin make-xxl-container($padding-x: $container-padding-x) {
+  width: 100%;
+  max-width: 1888px;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Usage
+.container-xxxl {
+  @include make-xxl-container();
+}
