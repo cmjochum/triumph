@@ -11,103 +11,107 @@
 
 <body>
     <div class="container-xxxl">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <!-- Brand -->
-                <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="Logo" /></a>
+        <div class="main">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Brand -->
+                    <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="Logo" /></a>
 
-                <!-- Desktop-only links -->
-                <div class="d-none d-lg-flex align-items-center me-auto">
-                    <ul class="navbar-nav flex-row">
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Plan a Visit</a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Who We Are</a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Connect</a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Ministries</a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Events</a></li>
-                        <li class="nav-item me-3"><a class="nav-link" href="#">Media</a></li>
-                    </ul>
-                    <button class="btn btn-primary me-3">Give Online</button>
-                    <!-- Hamburger (always visible) -->
-                    <button class="navbar-toggler d-none d-lg-block" type="button" data-bs-toggle="offcanvas"
+                    <!-- Desktop-only links -->
+                    <div class="menu-bar d-none d-lg-flex align-items-center">
+                        <ul class="navbar-nav flex-row">
+                            <li class="nav-item"><a class="nav-link" href="#">Plan a Visit</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Who We Are</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Connect</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Ministries</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                        </ul>
+                        <button class="btn btn-give">Give Online</button>
+
+                        <button class="navbar-toggler d-none d-lg-flex align-items-center justify-content-center"
+                            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                            aria-controls="offcanvasNavbar">
+                            <img src="images/menu.svg" />
+                        </button>
+                    </div>
+
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                </div>
 
-                <!-- Hamburger (always visible) -->
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Login / Account (desktop only) -->
-                <div class="d-none d-lg-flex ms-3">
-                    <a href="#" class="me-2"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
-                    <a href="#"><i class="fa-regular fa-user"></i> Create Account</a>
-                </div>
-
-                <!-- Offcanvas Menu -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title">Menu</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                    <!-- Login / Account (desktop only) -->
+                    <div class="account-links d-none d-lg-flex">
+                        <a href="#"><i class="fa-regular fa-user"></i> Create Account</a>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav">
-                            <!-- Links that duplicate desktop (mobile-only) -->
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Plan a Visit</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Who We Are</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Connect</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Ministries</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Events</a></li>
-                            <li class="nav-item d-lg-none"><a class="nav-link" href="#">Media</a></li>
 
-                            <!-- Extra links (desktop + mobile) -->
-                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Locations</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Serving</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Get Help</a></li>
-                        </ul>
+                    <!-- Offcanvas Menu -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <!-- Links that duplicate desktop (mobile-only) -->
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Plan a Visit</a></li>
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Who We Are</a></li>
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Connect</a></li>
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Ministries</a></li>
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Events</a></li>
+                                <li class="nav-item d-lg-none"><a class="nav-link" href="#">Media</a></li>
+
+                                <!-- Extra links (desktop + mobile) -->
+                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Locations</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Messages</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Serving</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Prayer</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Get Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="main-content container">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h1>We're Glad You're Here</h1>
+                    <p>We are a thriving and diverse community of real people experiencing real life together.</p>
+                    <div class="main-button d-flex">
+                        <a href="#" title="Plan a Visit" class="btn btn-primary">Plan a Visit</a>
+                        <a href="#" title="About Us" class="btn btn-primary">About Us</a>
                     </div>
                 </div>
-
             </div>
-        </nav>
-
-        <div class="container">
-
-            <div class="d-flex flex-column">
-                <h1>We're Glad You're Here</h1>
-                <p>We are a thriving and diverse community of real people experiencing real life together.</p>
-                <div class="d-flex">
-                    <a href="#" title="Plan a Visit" class="btn btn-primary">Plan a Visit</a>
-                    <a href="#" title="About Us" class="btn btn-primary">About Us</a>
+            <div class="main-bottom row align-items-center">
+                <div class="col"></div>
+                <div class="col countdown-container d-flex flex-column text-center">
+                    <span class="copy">Next Service Starts In:</span>
+                    <span class="counter">00:00:00</span>
+                </div>
+                <div class="col social-icons d-flex justify-content-end">
+                    <a href="#" title="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
-            <div class="d-flex flex-column text-center">
-                <span>Next Service Starts In:</span>
-                <span>00:00:00</span>
-            </div>
-
-            <div class="text-end">
-                <a href="#" title="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" title="X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" title="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </div>
         </div>
     </div>
 
-    <div class="container">
-        <h6>Welcome to Rock Solid</h6>
+    <div class="container d-flex flex-column d-md-block">
+        <h5>Welcome to Rock Solid</h5>
         <div class="row">
-            <div class="col">
-                <p>Following the Holy Spirit, we exist to create a movement of disciple-making disciples.</p>
+            <div class="col-12 col-md-6">
+                <p class="font-size-xl fw-bold lh-sm">Following the Holy Spirit, we exist to create a movement of
+                    disciple-making
+                    disciples.</p>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <p>Rock Solid Church is committed to creating a movement of disciple-making disciples—men and women who
                     reflect the diversity of our community, lived out in authentic unity.</p>
             </div>
@@ -143,13 +147,13 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <h6>Gospel</h6>
+        <div class="container d-flex flex-column d-md-block">
+            <h5>Gospel</h5>
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <p>The gospel is what should characterize us. It should be our identity: We are a gospel people.</p>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <p>The gospel is the good news of Jesus: That Jesus lived a sinless life in my place, died the death
                         that I deserved, and rose to life again. And whoever believes in him has eternal life. </p>
                 </div>
@@ -158,13 +162,13 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container d-flex flex-column">
         <span>Rock Solid Church continues to hold out love and Hope to the entire world.</span>
         <a href="#" title="Plan a Visit" class="btn btn-primary">Plan a Visit</a>
     </div>
 
     <div class="container-xxl">
-        <div class="text-center">
+        <div class="d-flex flex-column">
             <img src="images/volunteer.png" />
             <span>Find a Place to Volunteer</span>
             <p>Explore our ministries—find your place, grow in faith, and connect with a vibrant community!</p>
@@ -213,7 +217,7 @@
                 <div class="col">
                     <div class="row">
                         <div class="col-12 col-md-8">
-                            <div>
+                            <div class="d-flex flex-column">
                                 <a href="#">
                                     <img src="images/joshuas-road-to-peace.png" alt="Joshua's Road to Peace" />
                                 </a>
@@ -222,17 +226,22 @@
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="row">
-                                <div class="col-12">
-                                    <a href="#">
-                                        <img src="images/by-any-means-necessary.png" alt="By Any Means Necessary" />
-                                    </a>
-                                    <a href="#" title="By Any Means Necessary">By Any Means Necessary</a>
+                                <div class="col-6 col-md-12">
+                                    <div class="d-flex flex-column">
+                                        <a href="#">
+                                            <img src="images/by-any-means-necessary.png" alt="By Any Means Necessary"
+                                                class="img-fluid" />
+                                        </a>
+                                        <a href="#" title="By Any Means Necessary">By Any Means Necessary</a>
+                                    </div>
                                 </div>
-                                <div class="col-12">
-                                    <a href="#">
-                                        <img src="images/holding-on-to-hope.png" alt="Holding on to Hope" />
-                                    </a>
-                                    <a href="#" title="Holding on to Hope">Holding on to Hope</a>
+                                <div class="col-6 col-md-12">
+                                    <div class="d-flex flex-column">
+                                        <a href="#">
+                                            <img src="images/holding-on-to-hope.png" alt="Holding on to Hope" />
+                                        </a>
+                                        <a href="#" title="Holding on to Hope">Holding on to Hope</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +255,7 @@
     <footer>
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <img src="images/logo-black.png" alt="Rock Solid Christian Church Logo" />
                     <span>11340 W. Bell Road, Suite 200<br />Surprise, AZ 85378</span>
                     <a href="tel:0000000000">(000) 000-0000</span>
@@ -257,14 +266,14 @@
                             <a href="#" title="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-md-6">
                     <div class="text-end">
                         <a href="#" class="btn btn-primary">Plan a Visit</a>
                         <a href="#" class="btn btn-outline-primary">Login</a>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <h6>Quick Links</h6>
+                        <div class="col-12 col-md-6">
+                            <h5>Quick Links</h5>
                             <ul>
                                 <li><a href="#" title="About Rock Solid">About Rock
                                         Solid</a></li>
@@ -275,8 +284,8 @@
                                 <li><a href="#" title="Serving">Serving</a></li>
                             </ul>
                         </div>
-                        <div class="col">
-                            <h6>Get in Touch</h6>
+                        <div class="col-12 col-md-6">
+                            <h5>Get in Touch</h5>
                             <ul>
                                 <li><a href="#" title="Plan a Visit Request">Plan a Visit
                                         Request</a></li>

@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 // Import all of Bootstrap’s CSS
 @import "bootstrap/scss/bootstrap";
+
+// Customize some defaults
+$font-family-base: "Inter", sans-serif;
+$body-color: #2e2320;
+$body-bg: #fff;
+
 
 @mixin make-xxl-container($padding-x: $container-padding-x) {
   width: 100%;
@@ -13,4 +21,169 @@
 // Usage
 .container-xxxl {
   @include make-xxl-container();
+}
+
+@mixin make-font-size-xl() {
+  font-size: $font-size-base * 2;
+}
+
+.font-size-xl {
+  @include make-font-size-xl();
+}
+
+p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.main {
+  background-image: url("../images/main-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 48px;
+  margin-top: 16px;
+  padding: 37px 68px 32px;
+
+  .main-content {
+    margin-top: 265px;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 80px;
+    line-height: 96px;
+    font-weight: 900;
+    margin-bottom: 16px;
+  }
+
+  p {
+    color: #fff;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
+    max-width: 900px;
+    margin-bottom: 32px;
+  }
+
+  .main-button {
+    gap: 16px;
+
+    .btn-primary {
+      padding: 16px 24px;
+      background-color: #FBFBFB;
+      border-radius: 8px;
+      border: 1px solid #fbfbfb;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      color: $body-color;
+
+      &:hover {
+        color:#fff;
+        background-color: rgba($color: #fff, $alpha: 0.2);
+        border: 1px solid rgba($color: #fff, $alpha: 0.4);
+        background-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+      }
+    }
+  }
+
+  .main-bottom {
+margin-top: 160px;
+  }
+
+  .countdown-container {
+      
+
+      .copy,
+      .counter {
+        line-height: 34.5px;
+        font-size: 28px;
+        color: #fff;
+        font-weight: 400;
+      }
+
+      .counter {
+        font-weight: 700;
+      }
+    }
+
+  .social-icons {
+    gap: 30px;
+
+    a {
+      color: #fff;
+      font-size: 22.63px;
+      line-height: 27.16px;
+    }
+  }
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.menu-bar {
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  background-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+  border-radius: 100px;
+  padding: 8px;
+  border: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+  .navbar-nav {
+    gap: 10px;
+
+    .nav-link {
+      color: #fff;
+      padding: 10px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+
+      &:hover,
+      &:focus {
+        color: $gray-300;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background-color: #fff;
+    border-radius: 100px;
+    height: 47px;
+    width: 47px;
+    margin-left: 10px;
+  }
+}
+
+.btn-give {
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  border-radius: 100px;
+  padding: 10px 16px;
+  font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #fff;
+      margin-left: 30px;
+}
+
+.account-links {
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+h5 {
+  line-height: 32px;
+  color: #ABABAB;
+  text-transform: uppercase;
+  font-weight: 700;
 }
