@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    $('.owl-carousel').owlCarousel({
+    $('#volunteer-carousel').owlCarousel({
         loop: true,
         margin: 32,
         responsiveClass: true,
@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
             },
             600: {
                 items: 3,
-                nav: false
+                nav: true
             },
             1000: {
                 items: 5,
@@ -21,6 +21,26 @@ jQuery(document).ready(function ($) {
                 items: 7,
                 nav: true,
                 loop: false
+            }
+        }
+    });
+
+    $('#mission-carousel').owlCarousel({
+        loop: true,
+        margin: 32,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 2,
+                nav: true
+            },
+            1200: {
+                items: 3,
+                nav: false
             }
         }
     });
