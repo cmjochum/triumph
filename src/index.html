@@ -123,7 +123,7 @@
                         reflect the diversity of our community, lived out in authentic unity.</p>
                 </div>
             </div>
-            <img src="images/jesus-cross.png" alt="Jesus carrying cross" class="img-fluid" />
+            <img src="images/jesus-cross.png" alt="Jesus carrying cross" class="img-fluid animate-on-scroll" />
         </div>
     </section>
 
@@ -189,7 +189,8 @@
                             </p>
                         </div>
                     </div>
-                    <img src="images/jesus-teaching.png" alt="Jesus on shore teaching" class="img-fluid" />
+                    <img src="images/jesus-teaching.png" alt="Jesus on shore teaching"
+                        class="img-fluid animate-on-scroll" />
                 </div>
             </div>
         </div>
@@ -201,7 +202,7 @@
             <img src="images/bg-left.png" class="bg-left" />
         </div>
 
-        <img src="images/line.png" class="line" />
+        <img src="images/line.png" class="line scroll-image" />
 
         <section class="visit pt-5 container d-flex flex-column">
             <span class="d-block mb-4 text-center text-uppercase">Rock Solid Church continues to hold out <span
@@ -269,7 +270,7 @@
                     <div class="col-12 col-lg-6">
                         <div class="row align-items-stretch">
                             <div class="col-12 col-lg-8">
-                                <div class="story">
+                                <div class="story animate-on-scroll">
                                     <a href="#" title="Joshua's Road to Peace">
                                         <img src="images/joshuas-road-to-peace.png" alt="Joshua's Road to Peace" />
                                         <span>Joshua's Road to Peace</span></a>
@@ -278,7 +279,7 @@
                             <div class="col-12 col-lg-4">
                                 <div class="row">
                                     <div class="col-6 col-lg-12">
-                                        <div class="story">
+                                        <div class="story animate-on-scroll">
                                             <a href="#" title="By Any Means Necessary">
                                                 <img src="images/by-any-means-necessary.png"
                                                     alt="By Any Means Necessary" />
@@ -286,7 +287,7 @@
                                         </div>
                                     </div>
                                     <div class="col-6 col-lg-12">
-                                        <div class="story">
+                                        <div class="story animate-on-scroll">
                                             <a href="#" title="Holding on to Hope">
                                                 <img src="images/holding-on-to-hope.png" alt="Holding on to Hope" />
                                                 <span>Holding on to Hope</span></a>
@@ -385,4 +386,37 @@
             header.classList.add("header-absolute");
         }
     });
+
+    const section = document.querySelector(".visit-container");
+    const img = section.querySelector(".scroll-image");
+
+    window.addEventListener("scroll", () => {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        const progress = Math.min(
+            Math.max((windowHeight - rect.top) / rect.height, 0),
+            1
+        );
+
+        const maxX = section.clientWidth - img.offsetWidth;
+        const x = progress * maxX;
+
+        img.style.transform = `translateX(${x}px)`;
+    });
+
+    // Animate on scroll
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    animateElements.forEach(el => observer.observe(el));
+
 </script>

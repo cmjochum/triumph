@@ -3,6 +3,9 @@ jQuery(document).ready(function ($) {
         loop: true,
         margin: 32,
         responsiveClass: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: false,
         responsive: {
             0: {
                 items: 1,

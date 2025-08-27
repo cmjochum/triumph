@@ -70,6 +70,83 @@ h5 {
   }
 }
 
+/*=============================
+  KEYFRAME ANIMATIONS
+==============================*/
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Initial state */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Active state when scrolled into view */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* HEADER & NAVIGATION */
 
 header {
@@ -183,6 +260,25 @@ header {
     @media (min-width: 1200px) {
       margin-top: $spacer * 23;
     }
+
+    h1,
+    p,
+    .hero-button {
+      opacity: 0;
+      animation: fadeSlideIn 1s ease forwards;
+    }
+
+    h1 {
+      animation-delay: 0.2s;
+    }
+
+    p {
+      animation-delay: 0.4s;
+    }
+
+    .hero-button {
+      animation-delay: 0.6s;
+    }
   }
 
   h1 {
@@ -240,6 +336,7 @@ header {
   }
 
   .countdown-container {
+
     .copy,
     .counter {
       line-height: 34.5px;
@@ -281,6 +378,17 @@ header {
 
     .col-12:last-of-type {
       max-width: 451px;
+    }
+  }
+
+  img {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 }
@@ -342,6 +450,7 @@ header {
   i {
     grid-column: 1;
     grid-row: 1;
+    animation: bounce 1s infinite;
   }
 
   img {
@@ -462,6 +571,7 @@ header {
       top: 0;
       right: 0;
       opacity: 0.6;
+      animation: slideInRight 1s ease forwards;
 
       @media (min-width: 1200px) {
         width: 756px;
@@ -478,6 +588,7 @@ header {
       z-index: -2;
       left: 0;
       opacity: 0.6;
+      animation: slideInLeft 1s ease forwards;
 
       @media (min-width: 1200px) {
         width: 756px;
@@ -500,11 +611,20 @@ header {
     }
   }
 
+  .scroll-image {
+    top: 0;
+    left: 0;
+    padding-right: $spacer * 0.75;
+  }
+
   .visit {
     grid-row: 1;
     grid-column: 1;
     position: relative;
     max-width: 1069px;
+    opacity: 0;
+    animation: fadeSlideIn 1s ease forwards;
+    animation-delay: 0.5s;
 
     @media (min-width: 1200px) {
       // margin-top: $spacer * 8 !important;
@@ -546,13 +666,13 @@ header {
     margin-top: $spacer * 8;
   }
 
-  > div {
-    > img {
+  >div {
+    >img {
       width: 115.63485717773438px;
       height: 97.84318542480469px;
     }
 
-    > p {
+    >p {
       color: #001d3a;
       max-width: 479px;
       margin-bottom: $spacer * 2;
@@ -620,9 +740,9 @@ header {
     margin-top: $spacer * 7;
   }
 
-  > div {
-    > div {
-      > div:first-of-type {
+  >div {
+    >div {
+      >div:first-of-type {
         max-width: 488px;
 
         span {
@@ -645,16 +765,16 @@ header {
         }
       }
 
-      > div:last-of-type {
+      >div:last-of-type {
         margin-top: $spacer * 2;
 
         @media (min-width: 1200px) {
           margin-top: 0;
         }
 
-        > div {
-          > div {
-            > div.story {
+        >div {
+          >div {
+            >div.story {
               padding-bottom: $spacer * 1.5;
 
               @media (min-width: 1200px) {
@@ -663,9 +783,9 @@ header {
             }
           }
 
-          > div:last-of-type {
-            > div {
-              > div:first-of-type {
+          >div:last-of-type {
+            >div {
+              >div:first-of-type {
                 @media (min-width: 1200px) {
                   margin-bottom: $spacer * 1.5;
                 }
@@ -690,6 +810,8 @@ header {
     height: 100%;
     border-radius: 1rem;
     max-width: 100%;
+    opacity: 0;
+    animation: zoomIn 0.8s ease forwards;
   }
 
   a {
@@ -705,6 +827,9 @@ header {
 
     span {
       display: block;
+      opacity: 0;
+      animation: fadeSlideIn 0.8s ease forwards;
+      animation-delay: 0.2s;
     }
   }
 }
@@ -719,8 +844,8 @@ footer {
   .contact {
     color: #2e2e2e;
 
-    > span {
-      > a {
+    >span {
+      >a {
         display: inline-block;
         text-decoration: none;
         border: 0 solid transparent;
@@ -764,7 +889,7 @@ footer {
   }
 
   .quick-links {
-    > div:last-of-type {
+    >div:last-of-type {
       @media (min-width: 1200px) {
         justify-self: flex-end;
       }
@@ -774,7 +899,7 @@ footer {
       border: 0;
       padding-left: 0;
 
-      > a {
+      >a {
         display: inline-block;
         color: #2e2e2e;
         text-decoration: none;
